@@ -1,0 +1,94 @@
+*{
+    margin: 0;padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.game{
+    width: 390px;
+    height: 600px;
+    background-image: url(./image/bg_02_h.png);
+    overflow: hidden;
+    position: absolute;
+}
+.player{
+    width: 130px;
+    height: auto;
+    position: absolute;
+    top: 370px;
+    left: 0px;
+    text-align: center;
+    z-index: 1;
+}
+.aline{
+    width: 130px;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+}
+.player img{
+    width: 115px;
+    height: auto;
+}
+.aline img{
+    width: 110px;
+    height: auto;
+}
+.alineMove{
+    animation: alineMove 1s linear infinite forwards;
+}
+.bullet{
+    width: 60px;
+    height: auto;
+    position: absolute;
+    top: 370px;
+    left: 0;
+    text-align: center;
+    animation: fire 1s linear 1 forwards;
+}
+.bulletImg{
+    width: 100%;
+    height: auto;
+}
+#result{
+    height: 200px;
+    width: 350px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: rgb(165, 101, 101);
+    display: block;
+}
+#btn{
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    margin-top: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@keyframes fire{
+    0%{
+        top: 370px;
+    }
+    100%{
+        top: -10px;
+    }
+}
+
+@keyframes alineMove{
+    0%{
+        top: -10px;
+    }
+    100%{
+        top: 470px;
+    }
+}
